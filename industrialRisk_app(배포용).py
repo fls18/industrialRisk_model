@@ -109,7 +109,7 @@ df_lookup = _safe_read_csv(LOOKUP_PATH)
 # ─────────────────────────────────────────
 # 입력 UI
 # ─────────────────────────────────────────
-st.subheader("입력값")
+st.subheader("예측에 사용할 작업 환경을 입력하세요")
 c1, c2 = st.columns(2)
 with c1:
     region   = st.selectbox("지역", REGION_OPTIONS, index=0)
@@ -445,3 +445,4 @@ st.sidebar.header("로딩 상태")
 st.sidebar.write(f"모델: {'✅' if model is not None else '❌'}  (.keras→.h5 자동)")
 st.sidebar.write(f"스케일러: {'✅' if scaler is not None else '❌'}")
 st.sidebar.write(f"원핫 메타: {'✅' if CAT is not None else '❌'}  (열 수: {0 if CAT is None else len(CAT)})")
+
